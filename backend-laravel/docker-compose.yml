@@ -3,7 +3,7 @@ services:
     # nginx
     nginx-service:
         image: nginx:stable-alpine
-        container_name: app-mamy-backends-laravel-nginx
+        container_name: app-many-backends-laravel-nginx
         ports:
             - "3111:80"
         volumes:
@@ -17,7 +17,7 @@ services:
         build:
             context: .
             dockerfile: ./docker/php/Dockerfile
-        container_name: app-mamy-backends-laravel-php
+        container_name: app-many-backends-laravel-php
         ports:
             - "3112:9000"
         volumes:
