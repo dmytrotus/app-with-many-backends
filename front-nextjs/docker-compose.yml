@@ -1,0 +1,13 @@
+services:
+  frontend:
+    container_name: app-many-backends-nextjs-front
+    build:
+      context: .
+      dockerfile: ./docker/nodejs/Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules # Prevent overwriting `node_modules` with the host's empty folder
+    working_dir: /app
+    command: npm run dev
