@@ -4,12 +4,20 @@ The plan is to create an app with one frontend and many backends in different pr
 
 ## How to make separate containers work
 - create network:
-```docker network create shared_network_many_backends```
+```bash
+docker network create shared_network_many_backends
+```
 
-```docker network connect shared_network_many_backends app-many-backends-nextjs-front```
-```docker network connect shared_network_many_backends app-many-backends-laravel-nginx```
+```bash
+docker network connect shared_network_many_backends app-many-backends-nextjs-front
+```
+```bash
+docker network connect shared_network_many_backends app-many-backends-laravel-nginx
+```
 
-```docker network inspect shared_network_many_backends```
+```bash
+docker network inspect shared_network_many_backends
+```
 
 This last command needs to show something like
 
